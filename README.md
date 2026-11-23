@@ -1,20 +1,19 @@
 # Imaginated — Branding Agency Website
 > **"let's Design the Dream"**
 
-A high-converting, responsive single-page website for **Imaginated**, an independent strategic branding and visual identity agency. Built with pure modern web standards (**HTML5**, **CSS3**, and **Vanilla JavaScript**) without dependencies or heavy build steps.
+A modern, responsive, high-converting single-page website for **Imaginated**, an independent strategic branding and design agency based in **Rajapalayam, Tamil Nadu, India**. Built strictly with modern web standards (**HTML5**, **CSS3**, and **Vanilla JavaScript**) with zero backend or API dependencies.
 
 ---
 
-## 🌟 Overview & Design Philosophy
+## 🌟 Overview & Agency Identity
 
-The website's visual identity and layout are directly inspired by the studio's insignia: the union of a **glowing lightbulb** (strategic insight & bright ideas) and a **fountain pen nib** (meticulous craftsmanship & artisanal execution).
+The website layout reflects Imaginated's core identity: the union of a **glowing lightbulb** (strategic insight & radiant ideas) and a **fountain pen nib** (meticulous craftsmanship & precision execution).
 
-### Influences & Benchmarks
-Synthesizing the best principles from leading global branding agencies:
-- **[The Futur](https://thefutur.com/)**: High-impact editorial typography, structured 4-step creative methodology, and clear value communication.
-- **[Brandbench](https://www.brandbench.co/)**: Sleek dark-mode aesthetic, refined card borders, subtle radiant glows, and premium luxury feel.
-- **[Brandmindz](https://www.brandmindz.com/)**: Clear service taxonomies, structured deliverables, and high-conversion consultation inquiry flows.
-- **[Xpressreach](https://xpressreach.com/)**: Dynamic capabilities marquee, real-time client touchpoints, and prominent WhatsApp accessibility.
+### Studio Address
+> **Imaginated**  
+> Rajapalayam – 626117,  
+> Virudhunagar District,  
+> Tamil Nadu, India.
 
 ---
 
@@ -22,189 +21,129 @@ Synthesizing the best principles from leading global branding agencies:
 
 ```text
 Imaginated-Website/
-├── index.html              # Semantic HTML5 single-page structure & schema.org JSON-LD
+├── index.html              # Semantic single-page HTML5 with Schema.org & OpenGraph
 ├── README.md               # Complete documentation and configuration reference
 └── assets/
     ├── css/
-    │   └── style.css       # Design tokens (CSS custom properties), responsive styles & animations
+    │   └── style.css       # Configurable CSS variables, responsive design tokens & layout
     ├── js/
-    │   └── main.js         # Mobile drawer, theme toggle, WhatsApp bridge & form validation
+    │   └── main.js         # Navigation drawer, theme toggle, sticky header, scroll spy
     └── images/
-        └── logo.jpg        # Official Imaginated logo emblem (provided by client)
+        └── logo.jpg        # Official Imaginated logo emblem
 ```
 
 ---
 
-## 📱 Key Features
+## 📱 Page Sections & Features
 
-1. **Fully Responsive Across All Screens**:
-   - Fluid typography with CSS `clamp()` scales seamlessly from 320px mobile screens to 4K ultra-wide displays.
-   - Flexible CSS Grid and Flexbox layouts.
-   - Accessible mobile navigation drawer with hamburger animation and ESC key handling.
-2. **Configurable Color Theming**:
-   - Centralized CSS Variables (`:root`) at the very top of `style.css`.
-   - Built-in Dark / Light mode toggle with `localStorage` persistence.
-3. **Dedicated Contact & Lead Channels**:
-   - **Email**: `contact@imaginated.in` (one-click mailto fallback)
-   - **Phone**: `+91 9080364386` (direct dial)
-   - **Click to WhatsApp**: Instant pre-filled chat on `+91 9080364386` (`https://wa.me/919080364386`)
-   - **Social Profiles**: Direct links to official **Instagram** and **LinkedIn** channels.
-   - **Floating WhatsApp Widget**: Persistent bottom-right pulsating button for instant lead generation.
-   - **Direct WhatsApp Brief Compiler**: Button on the contact form that instantly formats the user's filled inputs into a formatted WhatsApp message!
-4. **Comprehensive Branding Services**:
-   - Brand Strategy & Positioning
-   - Visual Identity & Logo Systems
-   - Packaging & Print Systems
-   - Digital Experience & UI/UX
-   - Social Content & Launch Kits
-   - Brand Evolution & Rebranding
-5. **No External Build Tools Required**:
-   - Zero `npm install` needed.
-   - Opens immediately in any browser or static hosting environment.
+1. **Header & Navigation**:
+   - Sticky navbar with glassmorphism blur backdrop (`backdrop-filter: blur(14px)`).
+   - Brand logo mark with "IMAGINATED" and "let's Design the Dream".
+   - Links: **About**, **Services**, **Process**, **Contact**.
+   - Built-in **Light / Dark mode toggle** with local preference storage.
+   - Header action button for instant WhatsApp access.
+   - Mobile hamburger drawer with keyboard accessibility (ESC key to close).
+
+2. **Hero Section**:
+   - Headline: *"We turn bold visions into iconic brands."*
+   - Tagline callout: `[ let's Design the Dream ]`.
+   - Direct call-to-actions: **Click to WhatsApp** and **Email Us**.
+   - Key agency pillars: Tailored Visual Systems, 360° Strategy, Direct Founder-Led Collaboration, Fast WhatsApp Response.
+   - Emblem showcase explaining the Pen Nib & Glowing Bulb metaphor.
+
+3. **Capabilities Marquee**:
+   - Smooth infinite scroll strip featuring core capabilities (Brand Strategy, Visual Identity, Packaging, Design Systems, Digital Experiences, Typography, Social Brand Kits, Rebranding).
+
+4. **Philosophy & About**:
+   - Core pillars: Strategy First, Meticulous Craft, Scalable Impact.
+
+5. **Core Services**:
+   - 01. Brand Strategy & Positioning
+   - 02. Visual Identity & Logo Systems (*Signature Offering*)
+   - 03. Packaging & Print Systems
+   - 04. Digital Experience & UI/UX
+   - 05. Social Content & Launch Kits
+   - 06. Brand Evolution & Rebranding
+   - Each service card features deliverables and a direct Click-to-WhatsApp link pre-filled for that specific service!
+
+6. **4-Step Methodology**:
+   - Phase 1: Discovery & Diagnostics
+   - Phase 2: Strategy & Direction
+   - Phase 3: Design Craft & Systems
+   - Phase 4: Delivery & Guidelines
+
+7. **Direct Contact Hub**:
+   - **Click to WhatsApp**: Instant pre-filled chat with `+91 9080364386` (`https://wa.me/919080364386`).
+   - **Phone**: Direct call link to `+91 9080364386` (`tel:+919080364386`).
+   - **Email**: Direct link to `contact@imaginated.in` (`mailto:contact@imaginated.in`).
+   - **Office Address**: Rajapalayam 626117, Virudhunagar, Tamil Nadu, India with direct Google Maps link.
+   - **Social Profiles**: Links to official **Instagram** (`@imaginated.in`) and **LinkedIn**.
+   - **Floating WhatsApp Widget**: Persistent bottom-right pulsating button for effortless inquiries on all devices.
 
 ---
 
-## 🎨 Theme Customization & Configuration
+## 📞 Direct Contact & Social Links Reference
 
-All color tokens and styling variables are centralized at the beginning of [`assets/css/style.css`](assets/css/style.css).
+| Channel | Value / URL | Action |
+| :--- | :--- | :--- |
+| **WhatsApp** | `+91 9080364386` | [Open WhatsApp Chat](https://wa.me/919080364386?text=Hi%20Imaginated,%20I'd%20like%20to%20discuss%20a%20branding%20project.) |
+| **Phone** | `+91 9080364386` | [Call +91 9080364386](tel:+919080364386) |
+| **Email** | `contact@imaginated.in` | [Email contact@imaginated.in](mailto:contact@imaginated.in) |
+| **Address** | Rajapalayam 626117, Virudhunagar, Tamil Nadu | [Google Maps](https://maps.google.com/?q=Rajapalayam+626117+Tamil+Nadu+India) |
+| **Instagram** | `@imaginated.in` | [Instagram Profile](https://www.instagram.com/imaginated.in) |
+| **LinkedIn** | `Imaginated` | [LinkedIn Page](https://www.linkedin.com/company/imaginated) |
 
-### Default Variables (Dark Obsidian & Radiant Gold)
+---
+
+## 🎨 Theme Customization (CSS Variables)
+
+Colors are defined at the very top of [`assets/css/style.css`](assets/css/style.css) under `:root`.
 
 ```css
 :root {
-  /* Primary Brand Accent (Matches the nib/lightbulb logo) */
-  --color-primary: #F5BE0B;           /* Signature Radiant Gold */
-  --color-primary-hover: #E5A505;     /* Darker gold for interaction */
-  --color-primary-light: #FDE68A;     /* Soft gold for badges */
+  /* Brand Radiant Gold (Extracted from the Lightbulb Nib Logo) */
+  --color-primary: #F5BE0B;
+  --color-primary-hover: #E5A505;
+  --color-primary-light: #FDE68A;
   --color-primary-glow: rgba(245, 190, 11, 0.28);
   --color-primary-subtle: rgba(245, 190, 11, 0.12);
 
-  /* Backgrounds & Surfaces (Default: Dark Obsidian) */
-  --color-bg: #0C0E14;                /* Deep Obsidian */
-  --color-bg-secondary: #12151F;      /* Alternate section contrast */
-  --color-surface: #171A26;           /* Cards & panels */
-  --color-surface-hover: #1F2333;     /* Hover state */
-  --color-surface-elevated: #24293C;  /* Elevated elements */
+  /* Obsidian Dark Theme */
+  --color-bg: #0C0E14;
+  --color-bg-secondary: #12151F;
+  --color-surface: #171A26;
+  --color-surface-hover: #1F2333;
+  --color-surface-elevated: #24293C;
 
-  /* Text & Typography */
-  --color-text: #F8FAFC;              /* Clean white */
-  --color-text-muted: #94A3B8;        /* Slate muted text */
-  --color-text-dim: #64748B;          /* Tertiary text */
-  --color-text-inverse: #0C0E14;      /* Text on primary buttons */
-
-  /* Fonts */
+  /* Typography */
   --font-heading: 'Syne', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 ```
 
-### Alternate Palette Presets
-
-To rebrand the site with an alternate color scheme in the future, simply update `--color-primary` and related variables in `:root`:
-
-#### 1. Electric Cobalt Blue (Modern Tech/FinTech Branding)
-```css
---color-primary: #2563EB;
---color-primary-hover: #1D4ED8;
---color-primary-glow: rgba(37, 99, 235, 0.3);
---color-primary-subtle: rgba(37, 99, 235, 0.12);
-```
-
-#### 2. Emerald Studio (Eco / Sustainable / Luxury)
-```css
---color-primary: #10B981;
---color-primary-hover: #059669;
---color-primary-glow: rgba(16, 185, 129, 0.3);
---color-primary-subtle: rgba(16, 185, 129, 0.12);
-```
-
-#### 3. Crimson / Neon Coral (Bold / Fashion / Media)
-```css
---color-primary: #FF3366;
---color-primary-hover: #E61E53;
---color-primary-glow: rgba(255, 51, 102, 0.3);
---color-primary-subtle: rgba(255, 51, 102, 0.12);
-```
+To switch or adjust the brand accent in the future, simply change `--color-primary` to your preferred hex code.
 
 ---
 
-## 📞 Contact Information & Social Profiles
+## 🚀 How to Run & Deploy
 
-The contact details are configured consistently across the site:
-
-| Channel | Value / URL | Location in Code |
-| :--- | :--- | :--- |
-| **Email** | `contact@imaginated.in` | `index.html` (header, contact card, form mailto, footer) |
-| **Phone** | `+91 9080364386` | `tel:+919080364386` in header, cards, and footer |
-| **WhatsApp Direct** | `+91 9080364386` | `https://wa.me/919080364386?text=...` |
-| **Instagram** | `https://www.instagram.com/imaginated.in` | Social cards in contact section & footer |
-| **LinkedIn** | `https://www.linkedin.com/company/imaginated` | Social cards in contact section & footer |
-
-### How the WhatsApp Direct Feature Works:
-1. **Quick Links**: All WhatsApp links use standard international format `919080364386` without spaces or plus signs:
-   ```html
-   <a href="https://wa.me/919080364386?text=Hi%20Imaginated,%20I'd%20like%20to%20discuss%20a%20branding%20project.">
-   ```
-2. **Form Bridge**: In `assets/js/main.js`, clicking **"Send Inquiry Directly Via WhatsApp"** reads the user's name, email, selected service, timeline, and message, formats them into a clean message, and opens WhatsApp automatically.
-
----
-
-## 🚀 How to Run Locally
-
-### Option 1: Direct File Open
-Double click [`index.html`](index.html) or right click and choose your preferred browser (Chrome, Safari, Edge, Firefox).
-
-### Option 2: Using Python's Built-in Server
-Open your terminal in the project directory:
+### Run Locally
+Double-click `index.html` to open it in your browser, or run:
 ```bash
-# For Python 3
 python3 -m http.server 8000
 ```
-Then visit `http://localhost:8000` in your browser.
+Then visit `http://localhost:8000`.
 
-### Option 3: VS Code Live Server Extension
-1. Open the folder in VS Code.
-2. Click **"Go Live"** in the status bar or right-click `index.html` and select **"Open with Live Server"**.
-
----
-
-## 🌐 Deployment Options
-
-Because this is a pure static website, it can be deployed for free on any platform in seconds:
-
-### Deploy to GitHub Pages
-1. Push this repository to GitHub.
-2. Go to **Settings** > **Pages**.
-3. Under **Branch**, select `main` (or `master`) and `/root` folder.
-4. Click **Save**. Your site will be live at `https://<username>.github.io/<repo-name>/`.
-
-### Deploy to Netlify
-1. Drag and drop the `Imaginated-Website` folder directly into [Netlify Drop](https://app.netlify.com/drop).
-2. Or connect the Git repository for automatic deployments on push.
-
-### Deploy to Vercel
-```bash
-# Install Vercel CLI (optional)
-npm i -g vercel
-vercel
-```
-Or import the Git repo in the [Vercel Dashboard](https://vercel.com).
-
-### Standard Web Hosting (cPanel / Apache / Nginx)
-Upload the contents of this folder (`index.html`, `assets/`, `README.md`) directly into your server's `public_html` or web root directory.
-
----
-
-## ⚡ Performance & Standards Compliance
-
-- **Semantic HTML5**: Native tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).
-- **Structured Data (Schema.org)**: Includes `ProfessionalService` JSON-LD schema for rich search engine indexing.
-- **Accessibility (a11y)**: Focus indicators, high contrast text ratios, ARIA attributes (`aria-expanded`, `aria-label`, `aria-hidden`).
-- **Zero Heavy Dependencies**: Pure CSS and modern vanilla JavaScript.
+### Deploy to GitHub Pages / Netlify / Vercel
+Because the project has no build step and no backend dependencies, simply:
+- **GitHub Pages**: Push to repository and enable GitHub Pages on `main` branch.
+- **Netlify**: Drag-and-drop the project folder onto [Netlify Drop](https://app.netlify.com/drop).
+- **Vercel**: Import the GitHub repo in Vercel dashboard and deploy.
+- **Web Hosting (cPanel / Apache / Nginx)**: Upload `index.html`, `assets/`, and `README.md` to `public_html`.
 
 ---
 
 ## 📄 License
 © 2025 **Imaginated**. All rights reserved.  
+*Rajapalayam 626117, Virudhunagar, Tamil Nadu, India.*  
 *Let's Design the Dream.*
-

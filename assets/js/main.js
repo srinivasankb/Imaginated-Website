@@ -7,8 +7,7 @@
  * 2. Theme switcher (Dark / Light) with localStorage persistence
  * 3. Sticky header & scroll observer for active navigation links
  * 4. IntersectionObserver for smooth scroll reveals
- * 5. Interactive project inquiry form validation & WhatsApp bridge
- * 6. Direct WhatsApp message compilation from form inputs
+ * 5. Footer dynamic year
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initScrollSpy();
   initScrollReveals();
-  initInquiryForm();
   initFooterYear();
 });
 
@@ -174,158 +172,7 @@ function initScrollReveals() {
 }
 
 /* --------------------------------------------------------------------------
-   6. INTERACTIVE INQUIRY FORM & WHATSAPP BRIDGE
-   -------------------------------------------------------------------------- */
-function initInquiryForm() {
-  const form = document.getElementById('project-inquiry-form');
-  const whatsappDirectBtn = document.getElementById('whatsapp-direct-btn');
-  const statusMsg = document.getElementById('form-status-msg');
-
-  if (!form) return;
-
-  const agencyPhone = '919080364386'; // +91 9080364386
-
-  // Helper to validate email format
-  const isValidEmail = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
-
-  // Helper to collect current form data
-  const getFormData = () => {
-    const name = document.getElementById('client-name').value.trim();
-    const email = document.getElementById('client-email').value.trim();
-    const phone = document.getElementById('client-phone').value.trim();
-    const service = document.getElementById('service-needed').value;
-    const timeline = document.getElementById('project-budget').value;
-    const message = document.getElementById('project-message').value.trim();
-
-    return { name, email, phone, service, timeline, message };
-  };
-
-  // Helper to validate required fields
-  const validateForm = () => {
-    let isValid = true;
-    const data = getFormData();
-
-    // Name Validation
-    const nameGroup = document.getElementById('client-name').closest('.form-group');
-    if (!data.name) {
-      nameGroup.classList.add('has-error');
-      isValid = false;
-    } else {
-      nameGroup.classList.remove('has-error');
-    }
-
-    // Email Validation
-    const emailGroup = document.getElementById('client-email').closest('.form-group');
-    if (!data.email || !isValidEmail(data.email)) {
-      emailGroup.classList.add('has-error');
-      isValid = false;
-    } else {
-      emailGroup.classList.remove('has-error');
-    }
-
-    // Service Validation
-    const serviceGroup = document.getElementById('service-needed').closest('.form-group');
-    if (!data.service) {
-      serviceGroup.classList.add('has-error');
-      isValid = false;
-    } else {
-      serviceGroup.classList.remove('has-error');
-    }
-
-    // Message Validation
-    const messageGroup = document.getElementById('project-message').closest('.form-group');
-    if (!data.message) {
-      messageGroup.classList.add('has-error');
-      isValid = false;
-    } else {
-      messageGroup.classList.remove('has-error');
-    }
-
-    return isValid;
-  };
-
-  // Submit via Email / Inquiry Flow
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      showStatus('Please fill in all required fields marked with an asterisk (*).', 'error');
-      return;
-    }
-
-    const data = getFormData();
-    const submitBtn = document.getElementById('submit-form-btn');
-    const originalText = submitBtn.innerHTML;
-
-    // Visual loading state
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Preparing Inquiry...';
-
-    setTimeout(() => {
-      // Craft a pre-filled mailto fallback to contact@imaginated.in
-      const subject = encodeURIComponent(`Project Inquiry: ${data.service} - ${data.name}`);
-      const body = encodeURIComponent(
-        `Hi Imaginated Team,\n\n` +
-        `Name: ${data.name}\n` +
-        `Email: ${data.email}\n` +
-        `Phone/WhatsApp: ${data.phone || 'Not provided'}\n` +
-        `Interested Service: ${data.service}\n` +
-        `Target Timeline: ${data.timeline}\n\n` +
-        `Project Brief:\n${data.message}\n\n` +
-        `-- Sent via Imaginated Website Form`
-      );
-
-      const mailtoUrl = `mailto:contact@imaginated.in?subject=${subject}&body=${body}`;
-
-      showStatus(`Thank you, ${data.name}! Opening your email client to send this inquiry directly to contact@imaginated.in. You can also click the WhatsApp button to chat instantly.`, 'success');
-
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-
-      // Trigger mailto client
-      window.location.href = mailtoUrl;
-    }, 600);
-  });
-
-  // Direct WhatsApp Bridge: Compile form into WhatsApp URL
-  if (whatsappDirectBtn) {
-    whatsappDirectBtn.addEventListener('click', () => {
-      const data = getFormData();
-      
-      let messageText = `Hi Imaginated Team, I'd like to discuss a project!`;
-
-      if (data.name) {
-        messageText += `\n\n*Name:* ${data.name}`;
-      }
-      if (data.email) {
-        messageText += `\n*Email:* ${data.email}`;
-      }
-      if (data.service) {
-        messageText += `\n*Service Needed:* ${data.service}`;
-      }
-      if (data.timeline) {
-        messageText += `\n*Target Timeline:* ${data.timeline}`;
-      }
-      if (data.message) {
-        messageText += `\n*Brief:* ${data.message}`;
-      }
-
-      const whatsappUrl = `https://wa.me/${agencyPhone}?text=${encodeURIComponent(messageText)}`;
-      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-    });
-  }
-
-  function showStatus(message, type) {
-    statusMsg.textContent = message;
-    statusMsg.className = `form-status-msg ${type}`;
-    statusMsg.style.display = 'block';
-  }
-}
-
-/* --------------------------------------------------------------------------
-   7. FOOTER YEAR AUTO-UPDATE
+   6. FOOTER YEAR AUTO-UPDATE
    -------------------------------------------------------------------------- */
 function initFooterYear() {
   const yearEl = document.getElementById('current-year');
@@ -333,4 +180,3 @@ function initFooterYear() {
     yearEl.textContent = new Date().getFullYear();
   }
 }
-
